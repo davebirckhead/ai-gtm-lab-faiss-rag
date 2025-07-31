@@ -1,0 +1,27 @@
+[project]
+name = "ai-gtm-lab-faiss-rag"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "faiss-cpu",
+    "langchain",
+    "openai",
+    "tiktoken",
+    "qdrant-client",
+    "duckdb",
+    "chromadb",
+    "fastapi",
+    "uvicorn",
+    "jinja2",
+    "python-dotenv",
+    "pydantic",
+    "orjson",
+    "ruff",
+    "black",
+    "mypy",
+    "pytest",
+    "pytest-cov"
+]
