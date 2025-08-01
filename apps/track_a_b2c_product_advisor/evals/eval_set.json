@@ -1,0 +1,12 @@
+[
+  {
+    "question": "What’s the best backpack for day hikes with a laptop?",
+    "expected_product_id": "bp001",
+    "keywords": ["day hike", "laptop", "TrailBlazer"]
+  },
+  {
+    "question": "Recommend a lightweight commuter pack.",
+    "expected_product_id": "bp004",
+    "keywords": ["commute", "laptop", "UrbanTransit"]
+  }
+]

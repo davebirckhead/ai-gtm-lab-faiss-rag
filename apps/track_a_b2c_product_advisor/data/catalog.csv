@@ -1,0 +1,6 @@
+id,name,brand,volume_liters,laptop_sleeve,price_usd,weight_kg,color,category
+bp001,TrailBlazer 30L,SummitGear,30,True,89.99,1.2,Red,Daypack
+bp002,UrbanEdge 20L,MetroPack,20,True,69.99,0.9,Black,Everyday
+bp003,AlpinePro 50L,PeakLine,50,False,149.99,2.0,Blue,Hiking
+bp004,Commuter Classic 25L,UrbanTransit,25,True,79.99,1.0,Grey,Everyday
+bp005,Explorer 40L,SummitGear,40,False,129.99,1.8,Green,Travel
