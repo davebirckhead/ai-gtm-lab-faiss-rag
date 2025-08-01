@@ -1,0 +1,5 @@
+Our CDP is SOC 2 Type II and ISO 27001 certified. We offer:
+- Data encryption in transit and at rest
+- Role-based access controls
+- Detailed audit logs
+- SAML/SSO integration

@@ -1,0 +1,5 @@
+Customer: Acme Corp
+Industry: Retail
+Challenge: Fragmented customer data across systems
+Solution: Implemented our CDP to unify profiles and enable personalized marketing
+Results: 25% increase in email engagement, 15% lift in conversion rates

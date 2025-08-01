@@ -1,0 +1,5 @@
+Customer: FinSure Inc
+Industry: Financial Services
+Challenge: Compliance and data governance across customer data pipelines
+Solution: Deployed secure data infrastructure with role-based access controls using our CDP
+Results: Achieved SOC 2 compliance and reduced risk of data breaches

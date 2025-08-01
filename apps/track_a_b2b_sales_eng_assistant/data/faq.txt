@@ -1,0 +1,5 @@
+Q: What integrations do you support?
+A: We support over 100 prebuilt connectors, including Snowflake, Salesforce, Segment, and more.
+
+Q: Can we bring our own machine learning models?
+A: Yes, our platform allows importing and operationalizing custom ML models via API.
