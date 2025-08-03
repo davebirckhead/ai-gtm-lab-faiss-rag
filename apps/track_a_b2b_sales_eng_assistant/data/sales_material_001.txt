@@ -1,0 +1,9 @@
+Title: Competitive Positioning – Segment vs Our CDP
+
+Compared to Segment, our CDP offers:
+- Native identity resolution and profile unification
+- Enterprise-grade governance
+- Easier workflow integration with marketing and analytics platforms
+- Transparent, usage-based pricing
+
+Our CDP is ideal for mid-to-large enterprise teams needing custom workflows and support.

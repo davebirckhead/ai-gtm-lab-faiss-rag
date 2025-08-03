@@ -1,0 +1,1 @@
+Yes, our CDP supports HIPAA compliance and is designed to securely handle protected health information (PHI).

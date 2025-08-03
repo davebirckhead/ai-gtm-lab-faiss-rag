@@ -1,0 +1,1 @@
+Unlike Segment, our CDP includes predictive scoring, identity resolution, and real-time personalization as core features.

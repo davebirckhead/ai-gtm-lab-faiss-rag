@@ -1,0 +1,10 @@
+Title: Enablement Packet – IT Buyer, Financial Services
+
+Contents:
+- Security Overview (SOC2, HIPAA)
+- Snowflake Integration Guide
+- Enterprise Contract Terms
+- Case Study – Global Financial Institution
+- Architecture Diagram
+
+Audience: IT decision-makers evaluating vendor compliance, scalability, and integration architecture.

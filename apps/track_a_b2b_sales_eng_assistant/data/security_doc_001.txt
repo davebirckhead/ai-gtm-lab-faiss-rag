@@ -1,0 +1,9 @@
+Title: Security Certifications
+
+Our Customer Data Platform (CDP) maintains the highest standards for data security and compliance. We are certified in the following:
+- SOC 2 Type II
+- ISO/IEC 27001
+- GDPR Compliant
+- CCPA Compliant
+
+These certifications ensure that our data management, storage, and processing meet rigorous security protocols.

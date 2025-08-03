@@ -1,0 +1,98 @@
+[
+  {
+    "question": "What security certifications does your CDP have?",
+    "expected_keywords": [
+      "SOC 2",
+      "ISO 27001",
+      "compliance",
+      "certifications"
+    ],
+    "expected_docs": [
+      "security_certifications"
+    ]
+  },
+  {
+    "question": "Do you support HIPAA compliance?",
+    "expected_keywords": [
+      "HIPAA",
+      "compliance",
+      "healthcare",
+      "protected data"
+    ],
+    "expected_docs": [
+      "hipaa_compliance"
+    ]
+  },
+  {
+    "question": "Can you share a case study for a large retail client?",
+    "expected_keywords": [
+      "retail",
+      "case study",
+      "implementation",
+      "results"
+    ],
+    "expected_docs": [
+      "case_study_large_retail"
+    ]
+  },
+  {
+    "question": "What does your contract look like for enterprise customers?",
+    "expected_keywords": [
+      "terms",
+      "enterprise",
+      "contract",
+      "SLA"
+    ],
+    "expected_docs": [
+      "enterprise_contract"
+    ]
+  },
+  {
+    "question": "What are the integration options with Snowflake?",
+    "expected_keywords": [
+      "Snowflake",
+      "integration",
+      "data warehouse",
+      "pipeline"
+    ],
+    "expected_docs": [
+      "integration_snowflake"
+    ]
+  },
+  {
+    "question": "How does your CDP compare to Segment?",
+    "expected_keywords": [
+      "Segment",
+      "comparison",
+      "differentiator",
+      "features"
+    ],
+    "expected_docs": [
+      "competitive_comparison_segment"
+    ]
+  },
+  {
+    "question": "Can you send enablement material for an IT manager at a Fortune 500 bank?",
+    "expected_keywords": [
+      "IT manager",
+      "bank",
+      "enablement",
+      "overview"
+    ],
+    "expected_docs": [
+      "enablement_fortune500_it"
+    ]
+  },
+  {
+    "question": "What makes your platform unique for marketing operations teams?",
+    "expected_keywords": [
+      "marketing operations",
+      "unique",
+      "features",
+      "benefits"
+    ],
+    "expected_docs": [
+      "unique_value_mops"
+    ]
+  }
+]

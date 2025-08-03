@@ -1,0 +1,9 @@
+Title: Case Study – Fortune 500 Retailer
+
+Client: National Apparel Retailer  
+Challenge: Siloed customer data and lack of unified customer profile  
+Solution: Our CDP integrated data from 12 sources, enabling real-time segmentation and personalization  
+Results:
+- 18% increase in email conversion rates
+- 25% improvement in media efficiency
+- Time to insight reduced from 7 days to 2 hours

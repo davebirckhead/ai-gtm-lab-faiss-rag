@@ -1,0 +1,8 @@
+Title: HIPAA Compliance
+
+We offer a HIPAA-compliant deployment model for covered entities and business associates. This includes:
+- Signed Business Associate Agreements (BAA)
+- Data encryption at rest and in transit
+- Access controls and audit logs
+
+Please contact our legal team for a BAA template or further documentation.

@@ -1,0 +1,9 @@
+Title: Enterprise Contract Template
+
+This document outlines the standard terms for enterprise contracts, including:
+- 12-month and 24-month agreement options
+- Monthly and annual billing options
+- SLAs for uptime (99.9%) and support response times
+- Data processing terms and termination clauses
+
+Redlines can be submitted via DocuSign or PDF.

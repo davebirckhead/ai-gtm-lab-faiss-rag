@@ -1,0 +1,4 @@
+Title: Integration FAQ – Snowflake
+
+Q: Can your CDP integrate with Snowflake?
+A: Yes. We offer a native Snowflake connector that supports both batch and streaming ingestion. It can read from and write to your Snowflake environment securely and with low latency.

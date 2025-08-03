@@ -7,57 +7,61 @@ from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableMap
+from langchain_core.documents import Document
 
 # Loads the OpenAI API key and other env variables from .env.
 load_dotenv()
 
-# Ingests all .txt files in the data directory (e.g., case_study_1.txt, contract_1.txt).
+# === Helper: Load documents from the local data/ folder ===
 def load_documents_from_folder(folder_path):
     documents = []
     for filename in os.listdir(folder_path):
         if filename.endswith(".txt"):
             with open(os.path.join(folder_path, filename), "r") as f:
                 content = f.read()
-                documents.append(content)
+                documents.append(
+                    Document(
+                        page_content=content,
+                        metadata={"source": filename, "doc_id": filename.replace(".txt", "")}
+                    )
+                )
     return documents
 
+# === Global Variables for Shared Use ===
+base_dir = os.path.dirname(os.path.abspath(__file__))
+data_path = os.path.join(base_dir, "data")
+
+documents = load_documents_from_folder(data_path)
+splitter = CharacterTextSplitter(chunk_size=800, chunk_overlap=50)
+docs = splitter.split_documents(documents)
+
+embeddings = OpenAIEmbeddings()
+vectorstore = FAISS.from_documents(docs, embeddings)
+retriever = vectorstore.as_retriever(search_type="similarity", k=5)
+
+# === RAG Chain Builder ===
 def build_chain():
-    # Defines the path to local data files.
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    data_path = os.path.join(base_dir, "data")
-
-    # Load and split documents; Splits each document into overlapping text chunks suitable for embedding
-    documents = load_documents_from_folder(data_path)
-    splitter = CharacterTextSplitter(chunk_size=800, chunk_overlap=50)
-    docs = splitter.create_documents(documents)
-
-    # Embed and store in FAISS; Enables semantic search based on user questions.
-    embeddings = OpenAIEmbeddings()
-    vectorstore = FAISS.from_documents(docs, embeddings)
-    retriever = vectorstore.as_retriever(search_type="similarity", k=5)
-
-    # LLM and prompt; Instructs the LLM to act as a helpful assistant, answering questions using retrieved context.
     llm = ChatOpenAI(model="gpt-3.5-turbo")
     prompt = PromptTemplate.from_template("""
-You are a sales engineer helper for a Customer Data Platform. Based on the provided context, generate a tailored enablement packet for the target account.
-The format should be:
+You are a helpful sales engineering assistant for a Customer Data Platform company. Use the context below to answer the user's question clearly, including specific details from the documents.
+
+When you cite or use facts from a document, **always include the document ID in parentheses** at the end of the relevant sentence. For example: "... and achieved 25% ROI (doc_id: 1234abcd)".
+
+Respond in this JSON format:
 {{
-  "summary": "...",
-  "key_features": ["...", "..."],
-  "relevant_case_studies": ["..."],
-  "next_steps": "..."
+  "materials": ["list of documents referenced by name or ID"],
+  "rationale": "detailed explanation that uses facts from the context, citing doc IDs"
 }}
 
 Context:
 {context}
 
-Target Account Question:
+User Question:
 {question}
 """)
 
     output_parser = StrOutputParser()
 
-    # Defines the LangChain RAG pipeline: retrieve relevant docs → insert into prompt → get response from LLM → parse output.
     chain = RunnableMap({
         "context": lambda x: retriever.invoke(x["question"]),
         "question": lambda x: x["question"]
@@ -72,3 +76,4 @@ if __name__ == "__main__":
        "question": "What materials should I send a Fortune 500 retail company evaluating our CDP?"
     })
     print(result)
+    

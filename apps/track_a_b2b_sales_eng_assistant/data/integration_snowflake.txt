@@ -1,0 +1,1 @@
+We provide out-of-the-box integrations with Snowflake using native connectors and API pipelines.

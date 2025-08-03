@@ -1,0 +1,9 @@
+Title: Value for Marketing Operations
+
+Our CDP helps marketing ops teams:
+- Unify customer data from any source in real time
+- Create custom segments with an intuitive UI
+- Trigger omni-channel journeys across email, ads, and push
+- Attribute ROI with built-in analytics
+
+No SQL required. Powerful and scalable.
